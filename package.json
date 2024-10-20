@@ -2,9 +2,10 @@
   "name": "vehiclecre-backend",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
+  "main": "index.js",
+  "type": "commonjs",
   "scripts": {
-    "start": "nodemone index.js"
+    "start": "nodemon index.js"
   },
   "dependencies": {
     "body-parser": "^1.20.3",

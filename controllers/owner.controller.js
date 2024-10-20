@@ -1,7 +1,6 @@
-const { response } = require("express");
 const Owner = require("../models/owner.model")
 
-model.export.createOwner = async (req, res) => {
+module.exports.createOwner = async (req, res) => {
     try{
         const ownerData = {
             firstName: req.body.firstName,
@@ -19,7 +18,7 @@ model.export.createOwner = async (req, res) => {
                 status: true
             })
         } else {
-            return res.status(201).json({
+            return res.status(404).json({
                 message: "Somthing went wrong!",
                 status: false
             })

@@ -26,7 +26,7 @@ const vehicleSchema = new mongoose.Schema({
         require:true
     },
     purchaseDate:{
-        type:date,
+        type:Date,
         require:new Date()
     }
 },{
