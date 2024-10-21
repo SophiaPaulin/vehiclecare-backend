@@ -14,9 +14,12 @@ app.use(cors());
 
 const vehicleRouter = require("./routes/vehicleRouter");
 const ownerRouter = require("./routes/ownerRouter");
+// const maintenanceRecord = require("./routes/maintenanceRouter");
+
 
 app.use("/api/vehicle", vehicleRouter);
-app.use("/api/owner",ownerRouter),
+app.use("/api/owner",ownerRouter);
+// app.use("/api/maintenanceRecord",maintenanceRecordRouter);
 
 app.listen(port, () => {
     console.log(`Server is running on Port: ${port}`);

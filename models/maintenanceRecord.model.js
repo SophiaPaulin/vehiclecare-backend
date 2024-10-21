@@ -15,7 +15,8 @@ const maintenanceRecordSchema = new mongoose.Schema({
         default: new Date()
     },
     description:{
-        type: Text
+        type: String,
+        require: true
     },
     mileageAtService:{
         type:String,
