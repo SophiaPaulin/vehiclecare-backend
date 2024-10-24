@@ -1,6 +1,7 @@
 const Vehicle = require("../models/vehicle.model");
 const Owner = require("../models/owner.model");
-const { response } = require("express");
+// const { response } = require("express");
+
 
 module.exports.createVehicle = async (req, res) => {
     try {
@@ -21,7 +22,7 @@ module.exports.createVehicle = async (req, res) => {
                 status: true
             });
         } else {
-            return res.status(201).json({
+            return res.status(404).json({
                 message: "Something went wrong!",
                 status: false
             });

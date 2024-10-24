@@ -1,4 +1,4 @@
-const Owner = require("../models/owner.model")
+const Owner = require("../models/owner.model");
 
 module.exports.createOwner = async (req, res) => {
     try{
@@ -10,7 +10,7 @@ module.exports.createOwner = async (req, res) => {
             address: req.body.address
 
         }
-        const respones = await Owner.create(ownerData);
+        const response = await Owner.create(ownerData);
         if (response){
             return res.status(201).json({
                 message: "Owner created successfully",
@@ -33,11 +33,11 @@ module.exports.createOwner = async (req, res) => {
 }
 module.exports.getAllOwner = async (req, res) => {
     try{
-        const respones = await Owner.find({});
-        if (respones) {
+        const response = await Owner.find({});
+        if (response) {
             return res.status(200).json({
                 message: "Owner fetched successfully",
-                result: respones,
+                result: response,
                 status: true
             })
         } else {
@@ -56,11 +56,11 @@ module.exports.getById = async (req,res) => {
     const ownerId = req.params.id
     console.log({ownerId})
     try {
-        const respones = await Owner.finfOne({_id: ownerId});
-        if (reapone) {
+        const response = await Owner.findOne({_id: ownerId});
+        if (response) {
             return res.status(200).json({
                 message: "Owner featched successfully",
-                result: respones,
+                result: response,
                 status: true
             })
         } else {

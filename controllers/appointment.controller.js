@@ -55,7 +55,7 @@ module.exports.getAllAppointment = async (req, res) => {
     }
 };
 module.exports.getById = async (req, res) => {
-    const AppointmentId = req.params.id;
+    const appointmentId = req.params.id;
     console.log({ appointmentId })
     try {
         const response = await Appointment.findOne({ _id: appointmentId});
@@ -81,7 +81,7 @@ module.exports.getById = async (req, res) => {
 
 };
 module.exports.updateAppintment = async (req, res) => {
-    const AppointmentId = req.params.id;
+    const appointmentId = req.params.id;
     console.log({ appointmentId })
     try {
         const appointmentData = {
